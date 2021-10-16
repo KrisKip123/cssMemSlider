@@ -4,18 +4,19 @@ html {
 
 
 .wrapper {
-    background-color: black;
+    background-color: grey;
     width: 100%;
-    height: 100%;
+    height: 86.9rem;
     margin: 0 auto;
     padding-top: 100px;
 }
+
 
 .slider {
     width: 70rem;
     height: 35rem;
     overflow: hidden;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     background-color: red;
     margin: 0 auto;
 }
@@ -23,6 +24,7 @@ html {
 .slider_content {
     width: 400%;
     height: 100%;
+    transition: all .6s ease;
     display: flex;
 }
 
@@ -31,14 +33,16 @@ html {
     width: 70rem;
     height: 10rem;
     margin: 0 auto;
-    padding-top: 10px;
+    padding-top: 2.5rem;
 }
 
 .navigation_button {
+    box-sizing: border-box;
     width: 20rem;
     height: 100%;
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
+    padding-top: 0.5rem;
 }
 
 .button_label {
@@ -47,8 +51,33 @@ html {
     height: 1rem;
     margin: 0 0.5rem;
     cursor: pointer;
-    background-color: white;
+    background-color: aqua;
     border-radius: 100%;
+    border: solid 0.2rem aqua;
+}
+
+input[name= 'r'] {
+    position: fixed;
+    visibility: hidden;
+}
+
+.text_container {
+    overflow: hidden;
+    width: 40rem;
+    height: 2rem;
+}
+
+.text {
+    color: white;
+    width: 25%;
+    font-size: 2rem;
+}
+
+.text_container_content {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    transition: all .6s ease;
 }
 
 .radius {
@@ -67,26 +96,65 @@ html {
 .mem {
     width: 25%;
     height: 100%;
-    transition: all .6s ease;
 }
 
-#r1:checked ~ .s1 {
+.visitable {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    top: -0.75rem;
+    left: -0.75rem;
+}
+
+.button_label:hover  {
+    background-color: white;
+    border: solid 0.2rem white;
+}
+
+#r1:checked ~ .s0 .s1 {
     margin-left: 0;
 }
 
-#r2:checked ~ .s1 {
-    margin-left: -25%;
+#r2:checked ~ .s0 .s1{
+    margin-left: -100%;
 }
 
-#r3:checked ~ .s1 {
-    margin-left: -50%;
+#r3:checked ~ .s0 .s1 {
+    margin-left: -200%;
 }
 
-#r4:checked ~ .s1 {
-    margin-left: -75%;
+#r4:checked ~ .s0 .s1 {
+    margin-left: -300%;
 }
 
-input[name= 'r'] {
-    position: fixed;
-    visibility: hidden;
+#r1:checked ~ .s2 .s3 .s4 .s5 {
+    margin-left: 0;
 }
+#r2:checked ~ .s2 .s3 .s4 .s5 {
+    margin-left: -100%;
+
+}
+#r3:checked ~ .s2 .s3 .s4 .s5 {
+    margin-left: -200%;
+
+}
+#r4:checked ~ .s2 .s3 .s4 .s5 {
+    margin-left: -300%;
+}
+
+
+#r1:checked ~ .c1 .c2 .c3  {
+    background-color: white;
+}
+#r2:checked ~ .c1 .c2 .c4   {
+    background-color: white;
+
+}
+#r3:checked ~ .c1 .c2 .c5  {
+    background-color: white;
+
+}
+#r4:checked ~ .c1 .c2 .c6  {
+    background-color: white;
+}
+
